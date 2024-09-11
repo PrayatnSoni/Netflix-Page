@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    .main {
+        background-image: url(bgc.jpg);
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: max(1290px, 100vw);
+    }
+    
+    .main .box {
+        height: 80vh;
+        width: 100%;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        background-color: black;
+    }
+    
+    .saprate {
+        height: 0.5rem;
+        width: 100%;
+        background-color: rgb(35, 35, 35);
+        position: relative;
+        z-index: 20;
+    }
+    
+    .logo {
+        width: 200px;
+        color: rgb(229, 9, 20);
+        display: block;
+        position: relative;
+        z-index: 10;
+        filter: contrast(500%);
+        top: 9px;
+    }
+    
+    nav {
+        max-width: 1190px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+    
+    nav button {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+    }
+    
+    .h {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        position: relative;
+        font-family: "Martel Sans", sans-serif;
+        gap: 25px;
+        padding: 23px;
+        text-align: center;
+    }
+    
+    .first {
+        font-weight: 900;
+        font-size: 48px;
+        text-align: center;
+    }
+    
+    .second {
+        text-align: center;
+        font-weight: 400px;
+        font-size: 1.5rem;
+    }
+    
+    .third {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    .h input {
+        font-size: 1rem;
+        padding: 15px 29px;
+        /* font-size: 18px; */
+        border: 0.5px solid rgb(131, 127, 127);
+        background-color: rgba(0, 0, 0, 0.297);
+        border-radius: 5px;
+        margin-right: 4px;
+    }
+    /* .btn {
+        padding: 3px 10px;
+        font-weight: bold;
+        background-color: white;
+    } */
+    
+    .red1 {
+        background-color: red;
+        color: white;
+        padding: 8px 18px;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .btn2 {
+        background-color: rgba(58, 57, 57, 0.443);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 1.5px 25px 7.5px 18px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .btn2 svg {
+        height: 18px;
+    }
+    
+    .red2 {
+        background-color: red;
+        color: white;
+        padding: 15px 33px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .firstsec {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+        position: relative;
+        min-height: auto;
+        padding: 4.5rem 0;
+    }
+    
+    .sectext {
+        color: white;
+        flex-wrap: wrap;
+    }
+    
+    .secimg {
+        position: relative;
+    }
+    
+    .secimg img {
+        width: 580px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .secimg video {
+        width: 440px;
+        position: absolute;
+        right: 63px;
+        bottom: 107px;
+    }
+    
+    section.firstsec>div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    section.firstsec>div :nth-child(1) {
+        font-size: 48px;
+        font-weight: bolder;
+    }
+    
+    section.firstsec>div :nth-child(2) {
+        font-size: 24px;
+    }
+    
+    .thirdimg video {
+        width: 372px;
+        right: 105px;
+        bottom: 175px;
+    }
+    
+    .faq {
+        background-color: black;
+        color: white;
+        padding: 4.25rem 0;
+        width: 100%;
+    }
+    
+    .lastbox {
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+        padding: 30px;
+        max-width: 73vw;
+        margin: 10px auto;
+        font-size: 24px;
+        text-align: center;
+        gap: 20px;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    .lastbox input {
+        font-size: 1rem;
+        padding: 15px 45px;
+        /* font-size: 18px; */
+        border: 0.5px solid rgb(131, 127, 127);
+        background-color: rgba(0, 0, 0, 0.297);
+        border-radius: 5px;
+        margin-right: 4px;
+    }
+    
+    .lastbtn {
+        background-color: red;
+        color: white;
+        padding: 15px 33px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    .faq h1 {
+        text-align: center;
+        font-size: 48px;
+    }
+    
+    .faqbox {
+        display: flex;
+        background-color: #2d2d2d;
+        padding: 30px;
+        max-width: 73vw;
+        margin: 10px auto;
+        font-size: 24px;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    
+    .faqbox:hover {
+        background-color: rgba(113, 111, 111, 0.525);
+    }
+    
+    .lastq {
+        color: white;
+        max-width: 100%;
+        margin-left: 11.5vw;
+        margin-top: 6vh;
+    }
+    
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 77.9vw;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    .footer-item {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        padding: 0px 10px;
+        /* row-gap: 20px; */
+        text-align: center;
+    }
+    
+    .footer-item a {
+        color: white;
+        margin-bottom: 10px;
+    }
+    /* Media Querys */
+    
+    @media screen and (max-width: 1250px) {
+        .firstsec {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        nav {
+            width: 99vw;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .logo {
+            width: 150px;
+        }
+        .secimg img {
+            width: 480px;
+        }
+        .secimg video {
+            width: 380px;
+        }
+        .thirdimg video {
+            width: 270px;
+        }
+        .footer {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .first {
+            font-size: 35px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .secimg img {
+            width: 200px;
+        }
+        .secimg video {
+            width: 171px;
+            right: 8px;
+            bottom: 44px;
+        }
+        .thirdimg video {
+            width: 122px;
+            right: 44px;
+            bottom: 63px;
+        }
+        .footer {
+            grid-template-columns: 1fr 1fr;
+        }
+        .first {
+            font-size: 28px;
+        }
+        .second {
+            font-size: 1.25rem;
+        }
+        .third {
+            font-size: 1rem;
+        }
+        section.firstsec>div :nth-child(1) {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        section.firstsec>div :nth-child(2) {
+            font-size: 1.25rem;
+        }
+        .lastbox div {
+            display: flex;
+            flex-direction: column;
+        }
+        .lastbox div input {
+            margin-bottom: 10px;
+        }
+        .h div {
+            display: flex;
+            flex-direction: column;
+        }
+        .h input {
+            margin-bottom: 15px;
+            padding: 14px 15px;
+        }
+        .faq h1 {
+            text-align: center;
+            font-size: 35px;
+        }
+        .footer-item a {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        .footer {
+            grid-template-columns: 1fr;
+        }
+        .logo {
+            width: 120px;
+            top: -5px;
+            left: 3px;
+        }
+        .btn2 {
+            padding: 0.5px 10px 7.5px 9px;
+        }
+        .red1 {
+            padding: 7.5px 10px;
+        }
+        .footer-item a {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <nav>
+            <span><img class="logo" width="110px" src="Logonetflix.png" alt=""
+        /></span>
+            <div>
+                <button class="btn btn2">
+            <span>English</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="white"
+              fill="none"
+            >
+              <path
+                d="M7 8.37931H11.5M17 8.37931H14.5M11.5 8.37931H14.5M11.5 8.37931V7M14.5 8.37931C13.9725 10.2656 12.8679 12.0487 11.6071 13.6158M8.39286 17C9.41205 16.0628 10.5631 14.9134 11.6071 13.6158M11.6071 13.6158C10.9643 12.8621 10.0643 11.6426 9.80714 11.0909M11.6071 13.6158L13.5357 15.6207"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+                <button class="btn red1">Sign In</button>
+            </div>
+        </nav>
+        <div class="box"></div>
+        <div class="h">
+            <span class="first">Unlimited movies, TV shows and more</span>
+            <span class="second">Watch anywhere. Cancel anytime.</span>
+            <span class="third">Ready to watch? Enter your email to create or restart your
+          membership.</span
+        >
+        <div>
+          <input type="email" placeholder="Email Address" />
+          <button class="btn red2">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <div class="saprate"></div>
+    <section class="firstsec">
+      <div class="sectext">
+        <span> Enjoy on your TV </span>
+            <span>
+          Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,Blu-ray
+          players and more.
+        </span>
+        </div>
+        <div class="secimg">
+            <img src="img2.png" alt="" />
+            <video src="video1.mp4" autoplay loop muted></video>
+        </div>
+        </section>
+        <div class="saprate"></div>
+        <section class="firstsec secondsec">
+            <div class="secimg">
+                <img src="img3.jpg" alt="" />
+            </div>
+            <div class="sectext">
+                <span> Download your shows to watch offline </span>
+                <span>
+          Save your favourites easily and always have something to watch.
+        </span>
+            </div>
+        </section>
+
+        <div class="saprate"></div>
+
+        <section class="firstsec thirdsec">
+            <div class="sectext">
+                <span> Watch everywhere </span>
+                <span>
+          Stream unlimited movies and TV shows on your phone, tablet, laptop,
+          and TV.
+        </span>
+            </div>
+            <div class="secimg thirdimg">
+                <img src="img4.png" alt="" />
+                <video src="video-devices-in.m4v" autoplay loop muted></video>
+            </div>
+        </section>
+        <div class="saprate"></div>
+        <section class="firstsec fourthsec">
+            <div class="secimg">
+                <img src="img5.png" alt="" />
+            </div>
+            <div class="sectext">
+                <span> Create profiles for kids </span>
+                <span>
+          Send children on adventures with their favourite characters in a space
+          made just for them—free with your membership.
+        </span>
+            </div>
+        </section>
+
+        <div class="saprate"></div>
+
+        <section class="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faqbox">
+                <span>What is NetFlix?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="faqbox">
+                <span>How much does Netflix cost?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="faqbox">
+                <span>Where can I watch?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="faqbox">
+                <span>How do I cancel?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="faqbox">
+                <span>What can I watch on Netflix?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="faqbox">
+                <span>Is Netflix good for kids?</span>
+                <svg width="29" heigth="'29" viewbox="0 0 24 24" fill="white" xmlns="https.//www.w3.org/2000/svg">
+          <path
+            d="M12 4V20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4 12H20"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+            </div>
+            <div class="lastbox">
+                <span>Ready to watch? Enter your email to create or restart your
+          membership.</span
+        >
+        <div>
+          <input type="email" placeholder="Email Address" />
+          <button class="lastbtn">Get Started</button>
+        </div>
+      </div>
+    </section>
+    <div class="saprate"></div>
+    <div class="lastq">Questions? Call <u>000-800-919-1694</u></div>
+    <footer>
+      <div class="footer">
+        <div class="footer-item">
+          <a href="#">FAQ</a>
+          <a href="#">INVESTOR RELATION</a>
+          <a href="#">PRIVACY</a>
+          <a href="#">SPEED TEST</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">HELP CENTER</a>
+          <a href="#">JOBS</a>
+          <a href="#">COOKIE PREFRENCES</a>
+          <a href="#">LEGAL NOTICES</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">ACCOUNT</a>
+          <a href="#">WAYS TO WATCH</a>
+          <a href="#">CORPORATE INFORMATION</a>
+          <a href="#">ONLY ON NETFLIX</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">MEDIA CENTER</a>
+          <a href="#">TERMS OF USE</a>
+          <a href="#">CONTACT US</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
